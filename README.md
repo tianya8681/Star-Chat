@@ -2,7 +2,7 @@
 
 一个基于 Flask + Socket.IO 开发的现代化聊天社交软件，支持文字、图片、视频消息，以及完整的好友关系管理功能。界面风格参考微信设计，提供流畅的聊天体验。
 
-> ![star chat](/star chat.png.png "star chat")
+> ![star chat](/star chat.png "star chat")
 ## ✨ 功能特性
 
 ### 👤 用户功能
