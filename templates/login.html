@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - ✨星聊Star Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="login-bg">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+    
+    <div class="container">
+        <div class="login-wrapper">
+            <div class="login-left">
+                <div class="brand">
+                    <div class="logo">
+                        <span class="logo-icon">🚀</span>
+                        <h1>✨星聊Star Chat</h1>
+                    </div>
+                    <p class="tagline">连接你我，沟通无界</p>
+                    <p class="tagline">lhtnet.com</p>
+                </div>
+                
+                <div class="announcement">
+                    <div class="announcement-header">
+                        <span class="announcement-icon">📢</span>
+                        <h3>系统公告</h3>
+                    </div>
+                    <div class="announcement-content">
+                        <div class="announcement-item">
+                            <span class="announcement-date">2026-05-26</span>
+                            <p>欢迎使用✨星聊Star Chat聊天！立即注册开始畅聊</p>
+                        </div>
+                        <div class="announcement-item">
+                            <span class="announcement-date">2026-05-20</span>
+                            <p>新版本发布，新增实时消息已读功能</p>
+                        </div>
+                        <div class="announcement-item">
+                            <span class="announcement-date">2026-05-15</span>
+                            <p>优化聊天界面，提升用户体验</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="login-box">
+                <div class="login-header">
+                    <h2>登录账号</h2>
+                    <p>欢迎回来</p>
+                </div>
+                
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="username">
+                            <span class="label-icon">👤</span>
+                            用户名
+                        </label>
+                        <input type="text" id="username" name="username" placeholder="请输入用户名" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">
+                            <span class="label-icon">🔒</span>
+                            密码
+                        </label>
+                        <input type="password" id="password" name="password" placeholder="请输入密码" required>
+                    </div>
+                    {% if error %}
+                    <div class="error">
+                        <span class="error-icon">⚠️</span>
+                        {{ error }}
+                    </div>
+                    {% endif %}
+                    <button type="submit" class="btn">
+                        <span class="btn-icon">→</span>
+                        登录
+                    </button>
+                </form>
+                <p class="link">还没有账号？<a href="/register">立即注册</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

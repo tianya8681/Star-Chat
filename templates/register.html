@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册 - ✨星聊Star Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="login-bg">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+    
+    <div class="container">
+        <div class="login-wrapper">
+            <div class="login-left">
+                <div class="brand">
+                    <div class="logo">
+                        <span class="logo-icon">🚀</span>
+                        <h1>[✨星聊Star Chat]</h1>
+                    </div>
+                    <p class="tagline">连接你我，沟通无界</p>
+                    <p class="tagline">lhtnet.com</p>
+                </div>
+                
+                <div class="announcement">
+                    <div class="announcement-header">
+                        <span class="announcement-icon">✨</span>
+                        <h3>注册福利</h3>
+                    </div>
+                    <div class="announcement-content">
+                        <div class="announcement-item">
+                            <p>✨新用户注册即享无限聊天时长</p>
+                        </div>
+                        <div class="announcement-item">
+                            <p>❤️与好友实时畅快沟通~~！</p>
+                        </div>
+                        <div class="announcement-item">
+                            <p>❤️支持发送图片、文件、表情包emoji😊</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="login-box">
+                <div class="login-header">
+                    <h2>❤️创建账号</h2>
+                    <p>❤️开启星际之旅</p>
+                </div>
+                
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="username">
+                            <span class="label-icon">👤</span>
+                            用户名
+                        </label>
+                        <input type="text" id="username" name="username" placeholder="请输入用户名" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nickname">
+                            <span class="label-icon">🌟</span>
+                            ❤️昵称
+                        </label>
+                        <input type="text" id="nickname" name="nickname" placeholder="请输入昵称" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">
+                            <span class="label-icon">🔒</span>
+                            密码
+                        </label>
+                        <input type="password" id="password" name="password" placeholder="请输入密码" required>
+                    </div>
+                    {% if error %}
+                    <div class="error">
+                        <span class="error-icon">⚠️</span>
+                        {{ error }}
+                    </div>
+                    {% endif %}
+                    <button type="submit" class="btn">
+                        <span class="btn-icon">→</span>
+                        注册
+                    </button>
+                </form>
+                <p class="link">已有账号？<a href="/login">立即登录</a></p>
+                <p class="link">离恨天出品<a href="https://lhtnet.com">lhtnet.com</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
